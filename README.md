@@ -1,2 +1,4 @@
 # Tic_Tac_Toe
-mini project in C Tic Tac Toe game – a simple console application without graphics.
+## Mini Project 
+Tic Tac Toe game – a simple console application without graphics.
+Made using C Language.
