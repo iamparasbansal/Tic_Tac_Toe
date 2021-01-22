@@ -57,3 +57,18 @@ void menu()
         menu();
     }
 }
+
+int make2()
+{
+    if(board[5] == 2)
+        return 5;
+    if(board[2] == 2)
+        return 2;
+    if(board[4] == 2)
+        return 4;
+    if(board[6] == 2)
+        return 6;
+    if(board[8] == 2)
+        return 8;
+    return 0;
+}
