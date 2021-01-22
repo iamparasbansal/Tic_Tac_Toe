@@ -30,6 +30,7 @@ void main()
 
 void menu()
 {
+    //initial display
     int choice;
     system("cls");
     printf("\n--------MENU--------");
@@ -57,7 +58,6 @@ void menu()
         menu();
     }
 }
-
 int make2()
 {
     if(board[5] == 2)
@@ -70,5 +70,18 @@ int make2()
         return 6;
     if(board[8] == 2)
         return 8;
+    return 0;
+}
+
+int make4()
+{
+    if(board[1] == 2)
+        return 1;
+    if(board[3] == 2)
+        return 3;
+    if(board[7] == 2)
+        return 7;
+    if(board[9] == 2)
+        return 9;
     return 0;
 }
