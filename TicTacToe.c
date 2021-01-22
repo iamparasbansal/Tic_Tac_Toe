@@ -127,7 +127,7 @@ int posswin(int p)
         i++;
     }
 
-    
+
     if(board[1] * board[5] * board[9] == check_val)
     {
         if(board[1] == 2)
@@ -137,6 +137,17 @@ int posswin(int p)
         if(board[9] == 2)
             return 9;
     }
+
+    if(board[3] * board[5] * board[7] == check_val)
+    {
+        if(board[3] == 2)
+            return 3;
+        if(board[5] == 2)
+            return 5;
+        if(board[7] == 2)
+            return 7;
+    }
+    return 0;
 
 }
 
