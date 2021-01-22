@@ -127,6 +127,7 @@ int posswin(int p)
         i++;
     }
 
+    
     if(board[1] * board[5] * board[9] == check_val)
     {
         if(board[1] == 2)
@@ -137,4 +138,13 @@ int posswin(int p)
             return 9;
     }
 
+}
+
+void go(int n)
+{
+    if(turn % 2)
+        board[n] = 3;
+    else
+        board[n] = 5;
+    turn++;
 }
