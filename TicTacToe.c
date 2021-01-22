@@ -85,3 +85,38 @@ int make4()
         return 9;
     return 0;
 }
+
+int posswin(int p)
+{
+    // p==1 then X   p==0  then  O
+    int i;
+    int check_val,pos;
+
+    if(p == 1)
+        check_val = 18;
+    else
+        check_val = 50;
+
+    i = 1;
+    while(i<=9)//row check
+    {
+        if(board[i] * board[i+1] * board[i+2] == check_val)
+        {
+            if(board[i] == 2)
+                return i;
+            if(board[i+1] == 2)
+                return i+1;
+            if(board[i+2] == 2)
+                return i+2;
+        }
+        i+=3;
+    }
+
+
+
+
+
+
+
+
+}
