@@ -227,3 +227,26 @@ void check_draw()
         exit(0);
     }
 }
+
+void draw_board()
+{
+    int j;
+
+    for(j=9; j<17; j++)
+    {
+        gotoxy(35,j);
+        printf("|       |");
+    }
+    gotoxy(28,11);
+    printf("-----------------------");
+    gotoxy(28,14);
+    printf("-----------------------");
+
+    for(j=1; j<10; j++)
+    {
+        if(board[j] == 3)
+            put_X_O('X',j);
+        else if(board[j] == 5)
+            put_X_O('O',j);
+    }
+}
