@@ -216,3 +216,14 @@ void start_game()
         player_first();
 }
 
+void check_draw()
+{
+    if(turn > 9)
+    {
+        gotoxy(30,20);
+        //textcolor(128+RED);
+        printf("Game Draw");
+        getch();
+        exit(0);
+    }
+}
