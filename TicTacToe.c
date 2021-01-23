@@ -10,8 +10,10 @@ int player, comp;
 void menu();
 void go(int n);
 void start_game();
+void check_draw();
 void draw_board();
 void player_first();
+void put_X_O(char ch,int pos);
 COORD coord= {0,0}; // this is global variable
 //center of axis is set to the top left cornor of the screen
 void gotoxy(int x,int y)
@@ -249,4 +251,35 @@ void draw_board()
         else if(board[j] == 5)
             put_X_O('O',j);
     }
+}
+
+void put_X_O(char ch,int pos)
+{
+    int m;
+    int x = 31, y = 10;
+
+    m = pos;
+
+    if(m > 3)
+    {
+        while(m > 3)
+        {
+            y += 3;
+            m -= 3;
+        }
+    }
+    if(pos % 3 == 0)
+        x += 16;
+    else
+    {
+        pos %= 3;
+        pos--;
+        while(pos)
+        {
+            x+=8;
+            pos--;
+        }
+    }
+    gotoxy(x,y);
+    printf("%c",ch);
 }
