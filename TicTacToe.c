@@ -1,3 +1,6 @@
+//Mini project of Tic Tac Toe Game in C
+//Code by Paras Bansal
+
 #include<stdio.h>
 #include<conio.h>
 #include<stdlib.h>
@@ -283,3 +286,5 @@ void put_X_O(char ch,int pos)
     gotoxy(x,y);
     printf("%c",ch);
 }
+
+//Code Completed
