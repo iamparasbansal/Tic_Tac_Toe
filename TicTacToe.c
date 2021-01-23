@@ -4,7 +4,7 @@
 #include <windows.h>
 
 int board[10] = {2,2,2,2,2,2,2,2,2,2};
-int turn = 1;
+int turn = 1, flag=0;
 int player, comp;
 
 void menu();
@@ -188,3 +188,31 @@ void player_first()
     draw_board();
     start_game();
 }
+
+void start_game()
+{
+// p==1 then X   p==0  then  O
+    if(posswin(comp))
+    {
+        go(posswin(comp));
+        flag = 1;
+    }
+    else if(posswin(player))
+        go(posswin(player));
+    else if(make2())
+        go(make2());
+    else
+        go(make4());
+    draw_board();
+
+    if(flag)
+    {
+        gotoxy(30,20);
+        //textcolor(128+RED);
+        printf("Computer wins");
+        getch();
+    }
+    else
+        player_first();
+}
+
